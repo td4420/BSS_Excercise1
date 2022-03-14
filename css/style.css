@@ -1,0 +1,106 @@
+.block {
+    background-color: rgb(221, 215, 215);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+    margin-left: 35%;
+    width: 400px;
+    height: auto;
+    text-align: center;
+}
+.account {
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    border: none;
+    background-color: rgb(243, 240, 233);
+    padding: 15px;
+    margin: 10px;
+    min-width: 200px;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn {
+    background-color: inherit;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 100px;
+    font-size: large;
+}
+#btnLogin {
+    background-color: rgb(245, 172, 37);
+    color: white;
+    box-shadow: 1px 4px rgb(216, 211, 202);
+}
+#btnRegister {
+    color: rgb(7, 180, 180);
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.title {
+    align-self: center;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+}
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+#i-user {
+    padding: 15px;
+}
+.data {
+    background-color: rgb(233, 238, 240);
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding-right: 50px;
+}
+.table {
+    margin-left: 10px;
+    margin-top: 20px;
+    background-color: white;
+}
+th, td {
+    text-align: center;
+    padding: 10px;
+    min-width: 150px;
+}
+.info {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.add {
+    min-width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+.chart {
+    background-color: white;
+    padding: 20px;
+}
+#addDevice {
+    background-color: rgb(245, 172, 37);
+    color: white;
+    box-shadow: 1px 4px rgb(216, 211, 202);
+    margin-top: 20px;
+    min-width: 100px;
+}

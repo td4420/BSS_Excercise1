@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/83ec0c5111.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="title">
+                <h2>Device Management</h2>
+            </div>
+            <button class="btn" id="dashboard">Dashboard</button>
+            <button class="btn" id="logs">Logs</button>
+            <button class="btn" id="settings">Settings</button>
+        </div>
+        <div class="detail">
+            <div class="user">
+                <i id="i-user" class="fa-solid fa-circle-user fa-2x"></i>
+                <h2>Wellcome John</h2>
+            </div>
+            <div class="data">
+                <div class="table">
+                    <table id="device" border="1" frame="void" rules="rows">
+                        <tr>
+                            <th>Devices</th>
+                            <th>MAC Address</th>
+                            <th>IP</th>
+                            <th>Created Date</th>
+                            <th>Power Consumption</th>
+                        </tr>
+                        <tr>
+                            <td>TV</td>
+                            <td>00:1B:44:11:3A:B7</td>
+                            <td>127.0.0.2</td>
+                            <td>2021-05-31</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Washer</td>
+                            <td>00:1B:44:11:3A:B8</td>
+                            <td>127.0.0.3</td>
+                            <td>2021-05-31</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>Refrigerator</td>
+                            <td>00:1B:44:11:3A:B9</td>
+                            <td>127.0.0.4</td>
+                            <td>2021-05-31</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Selling Fan</td>
+                            <td>00:1B:44:11:3A:B2</td>
+                            <td>127.0.0.5</td>
+                            <td>2021-05-31</td>
+                            <td>100</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info">
+                    <div class="chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="add">
+                        <input type="text" name="" class="input" placeholder="name" id="deviceName" required>
+                        <input type="text" class="input" placeholder="IP" id="ip" required>
+                        <button class="btn" id="addDevice" onclick="addDevice()">ADD DEVICE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/myscripts.js"></script>
+</html>
