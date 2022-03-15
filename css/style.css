@@ -1,5 +1,8 @@
-.block {
-    background-color: rgb(221, 215, 215);
+body {
+    background-color: rgb(219, 219, 219);
+}
+.container {
+    background-color: white;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -9,50 +12,73 @@
     height: auto;
     text-align: center;
 }
-.account {
+.title {
+    color:rgb(83, 79, 79);
+}
+.container-input {
     display: flex;
     flex-direction: column;
 }
-.input {
+.field {
     border: none;
-    background-color: rgb(243, 240, 233);
+    background-color: rgb(211, 202, 182);
     padding: 15px;
     margin: 10px;
     min-width: 200px;
+    border-radius: 15px;
 }
-.button {
+.container-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .btn {
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 100px;
+    font-size: large;
+    background-color: rgb(245, 172, 37);
+    color: white;
+    box-shadow: 1px 4px rgb(216, 211, 202);
+    cursor: pointer;
+}
+.btn:hover, .white-btn:hover {
+    opacity: 70%;
+}
+.white-btn {
     background-color: inherit;
     border: none;
     border-radius: 12px;
     padding: 10px;
     min-width: 100px;
     font-size: large;
+    cursor: pointer;
 }
-#btnLogin {
-    background-color: rgb(245, 172, 37);
-    color: white;
-    box-shadow: 1px 4px rgb(216, 211, 202);
-}
-#btnRegister {
+.container-btn-register {
     color: rgb(7, 180, 180);
 }
-.container {
+.block {
     display: flex;
     flex-direction: row;
+    background-color: white;
+    justify-content: space-around;
+}
+.block-menu {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding-right: 50px;
 }
 .title {
     align-self: center;
 }
-.detail {
+.block-detail {
     display: flex;
     flex-direction: column;
+    flex-grow: 1000;
 }
-.user {
+.block-detail-user {
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -60,47 +86,75 @@
 #i-user {
     padding: 15px;
 }
-.data {
-    background-color: rgb(233, 238, 240);
+.block-detail-data {
+    background-color: rgb(238, 243, 235);
 }
-.menu {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding-right: 50px;
-}
-.table {
-    margin-left: 10px;
-    margin-top: 20px;
+
+.block-detail-data-table {
+    margin: 40px;
     background-color: white;
+}
+table {
+    width: 100%;
 }
 th, td {
     text-align: center;
     padding: 10px;
-    min-width: 150px;
+    border-bottom: 1px solid #ddd;
 }
-.info {
-    padding: 40px;
+tr:hover {background-color: coral;}
+.block-detail-data-info {
+    padding: 20px;
+    margin: 40px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
-.add {
-    min-width: 300px;
+.block-detail-data-info-add {   
+    flex-basis: 50%;
     background-color: white;
     display: flex;
     flex-direction: column;
     padding: 20px;
     align-items: center;
 }
-.chart {
+.block-detail-data-info-chart {
+    flex-basis: 50%;
     background-color: white;
-    padding: 20px;
+    margin-right: 25px;
 }
-#addDevice {
-    background-color: rgb(245, 172, 37);
+
+.block-detail-data-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.block-detail-data-page {
+    display: flex;
+    justify-content: center;
+}
+.block-detail-data-page-btn{
+    background-color: rgb(2, 80, 168);
     color: white;
-    box-shadow: 1px 4px rgb(216, 211, 202);
-    margin-top: 20px;
-    min-width: 100px;
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+@media (max-width: 415px) {
+    table, .block-menu, .block-detail-user {
+        display: none;
+    }
+    .block-detail-data-info {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+    }
 }

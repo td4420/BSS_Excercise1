@@ -8,24 +8,24 @@
     <script src="https://kit.fontawesome.com/83ec0c5111.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 </head>
-<body>
-    <div class="container">
-        <div class="menu">
-            <div class="title">
+<body onload="loadingPageDashboard()">
+    <div class="block">
+        <div class="block-menu">
+            <div class="block-menu-title title">
                 <h2>Device Management</h2>
             </div>
-            <button class="btn" id="dashboard">Dashboard</button>
-            <button class="btn" id="logs">Logs</button>
-            <button class="btn" id="settings">Settings</button>
+            <button class="white-btn" id="dashboard" style="color:rgb(15, 123, 196)">Dashboard</button>
+            <button class="white-btn" id="logs" onclick="showLogs()">Logs</button>
+            <button class="white-btn" id="settings">Settings</button>
         </div>
-        <div class="detail">
-            <div class="user">
+        <div class="block-detail">
+            <div class="block-detail-user">
                 <i id="i-user" class="fa-solid fa-circle-user fa-2x"></i>
-                <h2>Wellcome John</h2>
+                <h2 class="title block-detail-user-name">Wellcome John</h2>
             </div>
-            <div class="data">
-                <div class="table">
-                    <table id="device" border="1" frame="void" rules="rows">
+            <div class="block-detail-data">
+                <div class="block-detail-data-table">
+                    <table id="device">
                         <tr>
                             <th>Devices</th>
                             <th>MAC Address</th>
@@ -33,44 +33,22 @@
                             <th>Created Date</th>
                             <th>Power Consumption</th>
                         </tr>
+                        
                         <tr>
-                            <td>TV</td>
-                            <td>00:1B:44:11:3A:B7</td>
-                            <td>127.0.0.2</td>
-                            <td>2021-05-31</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>Washer</td>
-                            <td>00:1B:44:11:3A:B8</td>
-                            <td>127.0.0.3</td>
-                            <td>2021-05-31</td>
-                            <td>60</td>
-                        </tr>
-                        <tr>
-                            <td>Refrigerator</td>
-                            <td>00:1B:44:11:3A:B9</td>
-                            <td>127.0.0.4</td>
-                            <td>2021-05-31</td>
-                            <td>80</td>
-                        </tr>
-                        <tr>
-                            <td>Selling Fan</td>
-                            <td>00:1B:44:11:3A:B2</td>
-                            <td>127.0.0.5</td>
-                            <td>2021-05-31</td>
-                            <td>100</td>
+                            <th>Total</th>
+                            <td colspan="3"></td>
+                            <th>290</th>
                         </tr>
                     </table>
                 </div>
-                <div class="info">
-                    <div class="chart">
+                <div class="block-detail-data-info">
+                    <div class="block-detail-data-info-chart">
                         <canvas id="myChart"></canvas>
                     </div>
-                    <div class="add">
-                        <input type="text" name="" class="input" placeholder="name" id="deviceName" required>
-                        <input type="text" class="input" placeholder="IP" id="ip" required>
-                        <button class="btn" id="addDevice" onclick="addDevice()">ADD DEVICE</button>
+                    <div class="block-detail-data-info-add">
+                        <input type="text" class="block-detail-data-info-add-field field" placeholder="name" id="deviceName" required>
+                        <input type="text" class="block-detail-data-info-add-field field" placeholder="IP" id="ip" required>
+                        <button class="block-detail-data-info-add-btn btn" onclick="addDevice()">ADD DEVICE</button>
                     </div>
                 </div>
             </div>
